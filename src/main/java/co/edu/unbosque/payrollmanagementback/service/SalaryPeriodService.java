@@ -23,7 +23,7 @@ public class SalaryPeriodService {
                 .collect(Collectors.toList());
     }
 
-    public SalaryPeriodDTO getSalaryPeriodById(Long id) {
+    public SalaryPeriodDTO getSalaryPeriodById(Integer id) {
         return salaryPeriodRepository.findById(id)
                 .map(DataMapper::salaryPeriodEntityToDTO)
                 .orElseThrow(() -> new RuntimeException("SalaryPeriod no encontrado con ID: " + id));
@@ -35,7 +35,7 @@ public class SalaryPeriodService {
         return DataMapper.salaryPeriodEntityToDTO(savedEntity);
     }
 
-    public void deleteSalaryPeriod(Long id) {
+    public void deleteSalaryPeriod(Integer id) {
         if (!salaryPeriodRepository.existsById(id)) {
             throw new RuntimeException("SalaryPeriod no existe con ID: " + id);
         }

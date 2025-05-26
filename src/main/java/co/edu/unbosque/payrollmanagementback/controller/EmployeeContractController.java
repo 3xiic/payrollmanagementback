@@ -32,7 +32,7 @@ public class EmployeeContractController {
 	    }
 
 	    @GetMapping("/{id}")
-	    public ResponseEntity<EmployeeContractDTO> getContractById(@PathVariable Long id) {
+	    public ResponseEntity<EmployeeContractDTO> getContractById(@PathVariable Integer id) {
 	    	EmployeeContractDTO Contract = contractService.getContractById(id);
 	        return Contract != null ? ResponseEntity.ok(Contract) : ResponseEntity.notFound().build();
 	    }
@@ -44,13 +44,13 @@ public class EmployeeContractController {
 	    }
 
 	    @PutMapping("/{id}")
-	    public ResponseEntity<EmployeeContractDTO> updateContract(@PathVariable Long id, @RequestBody EmployeeContractDTO dto) {
+	    public ResponseEntity<EmployeeContractDTO> updateContract(@PathVariable Integer id, @RequestBody EmployeeContractDTO dto) {
 	    	EmployeeContractDTO updated = contractService.updateContract(id, dto);
 	        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
 	    }
 
 	    @DeleteMapping("/{id}")
-	    public ResponseEntity<Void> deleteContract(@PathVariable Long id) {
+	    public ResponseEntity<Void> deleteContract(@PathVariable Integer id) {
 	    	contractService.deleteContract(id);
 	        return ResponseEntity.noContent().build();
 	    }

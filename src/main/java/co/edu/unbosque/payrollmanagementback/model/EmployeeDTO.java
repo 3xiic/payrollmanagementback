@@ -3,9 +3,9 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class EmployeeDTO {
 
-	private Long vnEmployeeId;
-	private Long vnPersonId;
-	private Long vnRoleId;
+	private int vnEmployeeId;
+	private int vnPersonId;
+	private int vnRoleId;
 	private String vcHireDate;
 	private String vcBankAccount;
 	private String vcBankName;
@@ -31,7 +31,7 @@ public class EmployeeDTO {
 	 * @param vcAccountType
 	 * @param vcStatus
 	 */
-	public EmployeeDTO(Long vnEmployeeId, Long vnPersonId, Long vnRoleId, String vcHireDate, String vcBankAccount,
+	public EmployeeDTO(int vnEmployeeId, int vnPersonId, int vnRoleId, String vcHireDate, String vcBankAccount,
 			String vcBankName, String vcAccountType, String vcStatus,  String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
@@ -51,7 +51,7 @@ public class EmployeeDTO {
 	/**
 	 * @return the vnEmployeeId
 	 */
-	public Long getVnEmployeeId() {
+	public int getVnEmployeeId() {
 		return vnEmployeeId;
 	}
 
@@ -59,7 +59,7 @@ public class EmployeeDTO {
 	/**
 	 * @param vnEmployeeId the vnEmployeeId to set
 	 */
-	public void setVnEmployeeId(Long vnEmployeeId) {
+	public void setVnEmployeeId(int vnEmployeeId) {
 		this.vnEmployeeId = vnEmployeeId;
 	}
 
@@ -67,7 +67,7 @@ public class EmployeeDTO {
 	/**
 	 * @return the vnPersonId
 	 */
-	public Long getVnPersonId() {
+	public int getVnPersonId() {
 		return vnPersonId;
 	}
 
@@ -75,7 +75,7 @@ public class EmployeeDTO {
 	/**
 	 * @param vnPersonId the vnPersonId to set
 	 */
-	public void setVnPersonId(Long vnPersonId) {
+	public void setVnPersonId(int vnPersonId) {
 		this.vnPersonId = vnPersonId;
 	}
 
@@ -83,7 +83,7 @@ public class EmployeeDTO {
 	/**
 	 * @return the vnRoleId
 	 */
-	public Long getVnRoleId() {
+	public int getVnRoleId() {
 		return vnRoleId;
 	}
 
@@ -91,7 +91,7 @@ public class EmployeeDTO {
 	/**
 	 * @param vnRoleId the vnRoleId to set
 	 */
-	public void setVnRoleId(Long vnRoleId) {
+	public void setVnRoleId(int vnRoleId) {
 		this.vnRoleId = vnRoleId;
 	}
 

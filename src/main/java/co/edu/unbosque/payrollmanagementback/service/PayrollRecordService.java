@@ -23,7 +23,7 @@ public class PayrollRecordService {
                 .collect(Collectors.toList());
     }
 
-    public PayrollRecordDTO getRecordById(Long id) {
+    public PayrollRecordDTO getRecordById(Integer id) {
         return payrollRecordRepository.findById(id)
                 .map(DataMapper::payrollRecordEntityToDTO)
                 .orElseThrow(() -> new RuntimeException("Registro de nómina no encontrado con ID: " + id));
@@ -35,7 +35,7 @@ public class PayrollRecordService {
         return DataMapper.payrollRecordEntityToDTO(savedEntity);
     }
 
-    public void deleteRecord(Long id) {
+    public void deleteRecord(Integer id) {
         if (!payrollRecordRepository.existsById(id)) {
             throw new RuntimeException("No existe el registro de nómina con ID: " + id);
         }

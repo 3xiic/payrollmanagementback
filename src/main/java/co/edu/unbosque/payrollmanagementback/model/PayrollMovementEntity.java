@@ -15,13 +15,13 @@ public class PayrollMovementEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_movement_id", unique = true)
-	private Long vnMovementId;
+	private int vnMovementId;
 	@Column(name = "vn_payroll_id")
-	private Long vnPayrollId;
+	private int vnPayrollId;
 	@Column(name = "vn_item_id")
-	private Long vnItemId;
+	private int vnItemId;
 	@Column(name = "vn_amount")
-	private Long vnAmount;
+	private int vnAmount;
 	@Column(name = "vc_created_at")
 	private String vcCreatedAt;
 	@Column(name = "vc_upated_at")
@@ -45,7 +45,7 @@ public class PayrollMovementEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public PayrollMovementEntity(Long vnMovementId, Long vnPayrollId, Long vnItemId, Long vnAmount, String vcCreatedAt,
+	public PayrollMovementEntity(int vnMovementId, int vnPayrollId, int vnItemId, int vnAmount, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnMovementId = vnMovementId;
@@ -59,56 +59,56 @@ public class PayrollMovementEntity {
 	/**
 	 * @return the vnMovementId
 	 */
-	public Long getVnMovementId() {
+	public int getVnMovementId() {
 		return vnMovementId;
 	}
 
 	/**
 	 * @param vnMovementId the vnMovementId to set
 	 */
-	public void setVnMovementId(Long vnMovementId) {
+	public void setVnMovementId(int vnMovementId) {
 		this.vnMovementId = vnMovementId;
 	}
 
 	/**
 	 * @return the vnPayrollId
 	 */
-	public Long getVnPayrollId() {
+	public int getVnPayrollId() {
 		return vnPayrollId;
 	}
 
 	/**
 	 * @param vnPayrollId the vnPayrollId to set
 	 */
-	public void setVnPayrollId(Long vnPayrollId) {
+	public void setVnPayrollId(int vnPayrollId) {
 		this.vnPayrollId = vnPayrollId;
 	}
 
 	/**
 	 * @return the vnItemId
 	 */
-	public Long getVnItemId() {
+	public int getVnItemId() {
 		return vnItemId;
 	}
 
 	/**
 	 * @param vnItemId the vnItemId to set
 	 */
-	public void setVnItemId(Long vnItemId) {
+	public void setVnItemId(int vnItemId) {
 		this.vnItemId = vnItemId;
 	}
 
 	/**
 	 * @return the vnAmount
 	 */
-	public Long getVnAmount() {
+	public int getVnAmount() {
 		return vnAmount;
 	}
 
 	/**
 	 * @param vnAmount the vnAmount to set
 	 */
-	public void setVnAmount(Long vnAmount) {
+	public void setVnAmount(int vnAmount) {
 		this.vnAmount = vnAmount;
 	}
 

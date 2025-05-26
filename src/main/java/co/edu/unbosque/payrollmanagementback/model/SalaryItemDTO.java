@@ -2,12 +2,12 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class SalaryItemDTO {
 
-	private Long vnItemdId;
+	private int vnItemdId;
 	private String vcItemName;
 	private String vcItemType;
 	private String vcCalcType;
-	private Long vnSocialSecurity;
-	private Long parafiscal;
+	private int vnSocialSecurity;
+	private int parafiscal;
 	private String vcDescription;
 	private String vcCreatedAt;
 	private String vcUpdatedAt;
@@ -29,8 +29,8 @@ public class SalaryItemDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public SalaryItemDTO(Long vnItemdId, String vcItemName, String vcItemType, String vcCalcType, Long vnSocialSecurity,
-			Long parafiscal, String vcDescription, String vcCreatedAt, String vcUpdatedAt) {
+	public SalaryItemDTO(int vnItemdId, String vcItemName, String vcItemType, String vcCalcType, int vnSocialSecurity,
+			int parafiscal, String vcDescription, String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnItemdId = vnItemdId;
 		this.vcItemName = vcItemName;
@@ -47,7 +47,7 @@ public class SalaryItemDTO {
 	/**
 	 * @return the vnItemdId
 	 */
-	public Long getVnItemdId() {
+	public int getVnItemdId() {
 		return vnItemdId;
 	}
 
@@ -55,7 +55,7 @@ public class SalaryItemDTO {
 	/**
 	 * @param vnItemdId the vnItemdId to set
 	 */
-	public void setVnItemdId(Long vnItemdId) {
+	public void setVnItemdId(int vnItemdId) {
 		this.vnItemdId = vnItemdId;
 	}
 
@@ -111,7 +111,7 @@ public class SalaryItemDTO {
 	/**
 	 * @return the vnSocialSecurity
 	 */
-	public Long getVnSocialSecurity() {
+	public int getVnSocialSecurity() {
 		return vnSocialSecurity;
 	}
 
@@ -119,7 +119,7 @@ public class SalaryItemDTO {
 	/**
 	 * @param vnSocialSecurity the vnSocialSecurity to set
 	 */
-	public void setVnSocialSecurity(Long vnSocialSecurity) {
+	public void setVnSocialSecurity(int vnSocialSecurity) {
 		this.vnSocialSecurity = vnSocialSecurity;
 	}
 
@@ -127,7 +127,7 @@ public class SalaryItemDTO {
 	/**
 	 * @return the parafiscal
 	 */
-	public Long getParafiscal() {
+	public int getParafiscal() {
 		return parafiscal;
 	}
 
@@ -135,7 +135,7 @@ public class SalaryItemDTO {
 	/**
 	 * @param parafiscal the parafiscal to set
 	 */
-	public void setParafiscal(Long parafiscal) {
+	public void setParafiscal(int parafiscal) {
 		this.parafiscal = parafiscal;
 	}
 

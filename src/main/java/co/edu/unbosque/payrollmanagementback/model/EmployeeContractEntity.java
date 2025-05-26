@@ -15,19 +15,19 @@ public class EmployeeContractEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_contract_id", unique = true)
-	private Long vnContractId;
+	private int vnContractId;
 	@Column(name = "vn_employee_id")
-	private Long vnEmployeeId;
+	private int vnEmployeeId;
 	@Column(name = "vn_mode_id")
-	private Long vnModeId;
+	private int vnModeId;
 	@Column(name = "vc_start_date")
 	private String vcStartDate;
 	@Column(name = "vc_end_date")
 	private String vcEndDate;
 	@Column(name = "vn_monthly_salary")
-	private Long vnMonthlySalary;
+	private int vnMonthlySalary;
 	@Column(name = "vn_hours_week")
-	private Long vnHoursWeek;
+	private int vnHoursWeek;
 	@Column(name = "vc_terms")
 	private String vcTerms;
 	@Column(name = "vc_status")
@@ -60,8 +60,8 @@ public class EmployeeContractEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public EmployeeContractEntity(Long vnContractId, Long vnEmployeeId, Long vnModeId, String vcStartDate, String vcEndDate,
-			Long vnMonthlySalary, Long vnHoursWeek, String vcTerms, String vcStatus, String vcCreatedAt,
+	public EmployeeContractEntity(int vnContractId, int vnEmployeeId, int vnModeId, String vcStartDate, String vcEndDate,
+			int vnMonthlySalary, int vnHoursWeek, String vcTerms, String vcStatus, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnContractId = vnContractId;
@@ -82,7 +82,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @return the vnContractId
 	 */
-	public Long getVnContractId() {
+	public int getVnContractId() {
 		return vnContractId;
 	}
 
@@ -91,7 +91,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @param vnContractId the vnContractId to set
 	 */
-	public void setVnContractId(Long vnContractId) {
+	public void setVnContractId(int vnContractId) {
 		this.vnContractId = vnContractId;
 	}
 
@@ -100,7 +100,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @return the vnEmployeeId
 	 */
-	public Long getVnEmployeeId() {
+	public int getVnEmployeeId() {
 		return vnEmployeeId;
 	}
 
@@ -109,7 +109,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @param vnEmployeeId the vnEmployeeId to set
 	 */
-	public void setVnEmployeeId(Long vnEmployeeId) {
+	public void setVnEmployeeId(int vnEmployeeId) {
 		this.vnEmployeeId = vnEmployeeId;
 	}
 
@@ -118,7 +118,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @return the vnModeId
 	 */
-	public Long getVnModeId() {
+	public int getVnModeId() {
 		return vnModeId;
 	}
 
@@ -127,7 +127,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @param vnModeId the vnModeId to set
 	 */
-	public void setVnModeId(Long vnModeId) {
+	public void setVnModeId(int vnModeId) {
 		this.vnModeId = vnModeId;
 	}
 
@@ -172,7 +172,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @return the vnMonthlySalary
 	 */
-	public Long getVnMonthlySalary() {
+	public int getVnMonthlySalary() {
 		return vnMonthlySalary;
 	}
 
@@ -181,7 +181,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @param vnMonthlySalary the vnMonthlySalary to set
 	 */
-	public void setVnMonthlySalary(Long vnMonthlySalary) {
+	public void setVnMonthlySalary(int vnMonthlySalary) {
 		this.vnMonthlySalary = vnMonthlySalary;
 	}
 
@@ -190,7 +190,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @return the vnHoursWeek
 	 */
-	public Long getVnHoursWeek() {
+	public int getVnHoursWeek() {
 		return vnHoursWeek;
 	}
 
@@ -199,7 +199,7 @@ public class EmployeeContractEntity {
 	/**
 	 * @param vnHoursWeek the vnHoursWeek to set
 	 */
-	public void setVnHoursWeek(Long vnHoursWeek) {
+	public void setVnHoursWeek(int vnHoursWeek) {
 		this.vnHoursWeek = vnHoursWeek;
 	}
 

@@ -13,7 +13,7 @@ public class ContractModeEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_mode_id", unique = true)
-	private Long vnModeId;
+	private int vnModeId;
 	@Column(name = "vc_mode_name")
 	private String vcModeName;
 	@Column(name = "vc_description")
@@ -36,7 +36,7 @@ public class ContractModeEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public ContractModeEntity(Long vnModeId, String vcModeName, String vcDescription, String vcCreatedAt,
+	public ContractModeEntity(int vnModeId, String vcModeName, String vcDescription, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnModeId = vnModeId;
@@ -51,14 +51,14 @@ public class ContractModeEntity {
 	/**
 	 * @return the vnModeId
 	 */
-	public Long getVnModeId() {
+	public int getVnModeId() {
 		return vnModeId;
 	}
 
 	/**
 	 * @param vnModeId the vnModeId to set
 	 */
-	public void setVnModeId(Long vnModeId) {
+	public void setVnModeId(int vnModeId) {
 		this.vnModeId = vnModeId;
 	}
 

@@ -28,7 +28,7 @@ public class EmployeeContractService {
 	                .collect(Collectors.toList());
 	    }
 
-	    public EmployeeContractDTO getContractById(Long id) {
+	    public EmployeeContractDTO getContractById(Integer id) {
 	        return contractRepository.findById(id)
 	                .map(DataMapper::contractEntitytoDTO)
 	                .orElse(null); 
@@ -40,7 +40,7 @@ public class EmployeeContractService {
 	        return DataMapper.contractEntitytoDTO(saved);
 	    }
 
-	    public EmployeeContractDTO updateContract(Long id, EmployeeContractDTO dto) {
+	    public EmployeeContractDTO updateContract(Integer id, EmployeeContractDTO dto) {
 	        Optional<EmployeeContractEntity> existing = contractRepository.findById(id);
 	        if (existing.isPresent()) {
 	        	EmployeeContractEntity entity = DataMapper.contractDTOtoEntity(dto);
@@ -51,7 +51,7 @@ public class EmployeeContractService {
 	        return null;
 	    }
 
-	    public void deleteContract(Long id) {
+	    public void deleteContract(Integer id) {
 	    	contractRepository.deleteById(id);
 	    }
 }

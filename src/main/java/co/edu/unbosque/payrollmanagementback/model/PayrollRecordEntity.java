@@ -19,23 +19,23 @@ public class PayrollRecordEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_payroll_id", unique = true)
-	private Long vnPayrollId;
+	private int vnPayrollId;
 	@Column(name = "vn_employee_id")
-	private Long vnEmployeeId;
+	private int vnEmployeeId;
 	@Column(name = "vn_period_id")
-	private Long vnPeriodId;
+	private int vnPeriodId;
 	@Column(name = "vn_contract_id")
-	private Long vnContractId;
+	private int vnContractId;
 	@Column(name = "vn_salary_base")
-	private Long vnSalaryBase;
+	private int vnSalaryBase;
 	@Column(name = "vn_days_worked")
-	private Long vnDaysWorked;
+	private int vnDaysWorked;
 	@Column(name = "vn_total_earnings")
-	private Long vnTotalEarnings;
+	private int vnTotalEarnings;
 	@Column(name = "vn_total_deductions")
-	private Long vnTotalDeductions;
+	private int vnTotalDeductions;
 	@Column(name = "vn_net_pay")
-	private Long vnNetPay;
+	private int vnNetPay;
 	@Column(name = "vc_status")
 	private String vcStatus;
 	@Column(name = "vc_created_at")
@@ -72,8 +72,8 @@ public class PayrollRecordEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public PayrollRecordEntity(Long vnPayrollId, Long vnEmployeeId, Long vnPeriodId, Long vnContractId, Long vnSalaryBase,
-			Long vnDaysWorked, Long vnTotalEarnings, Long vnTotalDeductions, Long vnNetPay, String vcStatus,
+	public PayrollRecordEntity(int vnPayrollId, int vnEmployeeId, int vnPeriodId, int vnContractId, int vnSalaryBase,
+			int vnDaysWorked, int vnTotalEarnings, int vnTotalDeductions, int vnNetPay, String vcStatus,
 			String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnPayrollId = vnPayrollId;
@@ -93,126 +93,126 @@ public class PayrollRecordEntity {
 	/**
 	 * @return the vnPayrollId
 	 */
-	public Long getVnPayrollId() {
+	public int getVnPayrollId() {
 		return vnPayrollId;
 	}
 
 	/**
 	 * @param vnPayrollId the vnPayrollId to set
 	 */
-	public void setVnPayrollId(Long vnPayrollId) {
+	public void setVnPayrollId(int vnPayrollId) {
 		this.vnPayrollId = vnPayrollId;
 	}
 
 	/**
 	 * @return the vnEmployeeId
 	 */
-	public Long getVnEmployeeId() {
+	public int getVnEmployeeId() {
 		return vnEmployeeId;
 	}
 
 	/**
 	 * @param vnEmployeeId the vnEmployeeId to set
 	 */
-	public void setVnEmployeeId(Long vnEmployeeId) {
+	public void setVnEmployeeId(int vnEmployeeId) {
 		this.vnEmployeeId = vnEmployeeId;
 	}
 
 	/**
 	 * @return the vnPeriodId
 	 */
-	public Long getVnPeriodId() {
+	public int getVnPeriodId() {
 		return vnPeriodId;
 	}
 
 	/**
 	 * @param vnPeriodId the vnPeriodId to set
 	 */
-	public void setVnPeriodId(Long vnPeriodId) {
+	public void setVnPeriodId(int vnPeriodId) {
 		this.vnPeriodId = vnPeriodId;
 	}
 
 	/**
 	 * @return the vnContractId
 	 */
-	public Long getVnContractId() {
+	public int getVnContractId() {
 		return vnContractId;
 	}
 
 	/**
 	 * @param vnContractId the vnContractId to set
 	 */
-	public void setVnContractId(Long vnContractId) {
+	public void setVnContractId(int vnContractId) {
 		this.vnContractId = vnContractId;
 	}
 
 	/**
 	 * @return the vnSalaryBase
 	 */
-	public Long getVnSalaryBase() {
+	public int getVnSalaryBase() {
 		return vnSalaryBase;
 	}
 
 	/**
 	 * @param vnSalaryBase the vnSalaryBase to set
 	 */
-	public void setVnSalaryBase(Long vnSalaryBase) {
+	public void setVnSalaryBase(int vnSalaryBase) {
 		this.vnSalaryBase = vnSalaryBase;
 	}
 
 	/**
 	 * @return the vnDaysWorked
 	 */
-	public Long getVnDaysWorked() {
+	public int getVnDaysWorked() {
 		return vnDaysWorked;
 	}
 
 	/**
 	 * @param vnDaysWorked the vnDaysWorked to set
 	 */
-	public void setVnDaysWorked(Long vnDaysWorked) {
+	public void setVnDaysWorked(int vnDaysWorked) {
 		this.vnDaysWorked = vnDaysWorked;
 	}
 
 	/**
 	 * @return the vnTotalEarnings
 	 */
-	public Long getVnTotalEarnings() {
+	public int getVnTotalEarnings() {
 		return vnTotalEarnings;
 	}
 
 	/**
 	 * @param vnTotalEarnings the vnTotalEarnings to set
 	 */
-	public void setVnTotalEarnings(Long vnTotalEarnings) {
+	public void setVnTotalEarnings(int vnTotalEarnings) {
 		this.vnTotalEarnings = vnTotalEarnings;
 	}
 
 	/**
 	 * @return the vnTotalDeductions
 	 */
-	public Long getVnTotalDeductions() {
+	public int getVnTotalDeductions() {
 		return vnTotalDeductions;
 	}
 
 	/**
 	 * @param vnTotalDeductions the vnTotalDeductions to set
 	 */
-	public void setVnTotalDeductions(Long vnTotalDeductions) {
+	public void setVnTotalDeductions(int vnTotalDeductions) {
 		this.vnTotalDeductions = vnTotalDeductions;
 	}
 
 	/**
 	 * @return the vnNetPay
 	 */
-	public Long getVnNetPay() {
+	public int getVnNetPay() {
 		return vnNetPay;
 	}
 
 	/**
 	 * @param vnNetPay the vnNetPay to set
 	 */
-	public void setVnNetPay(Long vnNetPay) {
+	public void setVnNetPay(int vnNetPay) {
 		this.vnNetPay = vnNetPay;
 	}
 

@@ -37,7 +37,7 @@ public class EmployeeController {
 	    }
 
 	    @GetMapping("/{id}")
-	    public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id) {
+	    public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Integer id) {
 	    	EmployeeDTO Employee = employeeService.getEmployeeById(id);
 	        return Employee != null ? ResponseEntity.ok(Employee) : ResponseEntity.notFound().build();
 	    }
@@ -49,13 +49,13 @@ public class EmployeeController {
 	    }
 
 	    @PutMapping("/{id}")
-	    public ResponseEntity<EmployeeDTO> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDTO dto) {
+	    public ResponseEntity<EmployeeDTO> updateEmployee(@PathVariable Integer id, @RequestBody EmployeeDTO dto) {
 	    	EmployeeDTO updated = employeeService.updateEmployee(id, dto);
 	        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
 	    }
 
 	    @DeleteMapping("/{id}")
-	    public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
+	    public ResponseEntity<Void> deleteEmployee(@PathVariable Integer id) {
 	    	employeeService.deleteEmployee(id);
 	        return ResponseEntity.noContent().build();
 	    }

@@ -24,7 +24,7 @@ public class JobRoleService {
                 .collect(Collectors.toList());
     }
 
-    public JobRoleDTO getRoleById(Long id) {
+    public JobRoleDTO getRoleById(Integer id) {
         return jobRoleRepository.findById(id)
                 .map(DataMapper::jobRoleEntityToDTO)
                 .orElse(null); 
@@ -36,7 +36,7 @@ public class JobRoleService {
         return DataMapper.jobRoleEntityToDTO(saved);
     }
 
-    public JobRoleDTO updateRole(Long id, JobRoleDTO dto) {
+    public JobRoleDTO updateRole(Integer id, JobRoleDTO dto) {
         Optional<JobRoleEntity> existing = jobRoleRepository.findById(id);
         if (existing.isPresent()) {
             JobRoleEntity entity = DataMapper.jobRoleDTOtoEntity(dto);
@@ -47,7 +47,7 @@ public class JobRoleService {
         return null;
     }
 
-    public void deleteRole(Long id) {
+    public void deleteRole(Integer id) {
         jobRoleRepository.deleteById(id);
     }
 }

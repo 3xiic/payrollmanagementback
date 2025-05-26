@@ -23,7 +23,7 @@ public class PersonalInfoService {
                 .collect(Collectors.toList());
     }
 
-    public PersonalInfoDTO getPersonalInfoById(Long id) {
+    public PersonalInfoDTO getPersonalInfoById(Integer id) {
         return personalInfoRepository.findById(id)
                 .map(DataMapper::personalInfoEntityToDTO)
                 .orElseThrow(() -> new RuntimeException("Información personal no encontrada con ID: " + id));
@@ -35,7 +35,7 @@ public class PersonalInfoService {
         return DataMapper.personalInfoEntityToDTO(savedEntity);
     }
 
-    public void deletePersonalInfo(Long id) {
+    public void deletePersonalInfo(Integer id) {
         if (!personalInfoRepository.existsById(id)) {
             throw new RuntimeException("Información personal no existe con ID: " + id);
         }

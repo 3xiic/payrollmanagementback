@@ -16,7 +16,7 @@ public class OrgAreaEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_area_id", unique = true)
-	private Long vnAreaId;
+	private int vnAreaId;
 	@Column(name = "vc_area_name")
 	private String vcAreaName;
 	@Column(name = "vc_area_desc")
@@ -41,7 +41,7 @@ public class OrgAreaEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public OrgAreaEntity(Long vnAreaId, String vcAreaName, String vcAreaDesc, String vcCreatedAt, String vcUpdatedAt) {
+	public OrgAreaEntity(int vnAreaId, String vcAreaName, String vcAreaDesc, String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnAreaId = vnAreaId;
 		this.vcAreaName = vcAreaName;
@@ -55,14 +55,14 @@ public class OrgAreaEntity {
 	/**
 	 * @return the vnAreaId
 	 */
-	public Long getVnAreaId() {
+	public int getVnAreaId() {
 		return vnAreaId;
 	}
 
 	/**
 	 * @param vnAreaId the vnAreaId to set
 	 */
-	public void setVnAreaId(Long vnAreaId) {
+	public void setVnAreaId(int vnAreaId) {
 		this.vnAreaId = vnAreaId;
 	}
 

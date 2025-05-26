@@ -33,7 +33,7 @@ public class JobRoleController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<JobRoleDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<JobRoleDTO> getById(@PathVariable Integer id) {
         try {
             JobRoleDTO dto = jobRoleService.getRoleById(id);
             return ResponseEntity.ok(dto);
@@ -49,14 +49,14 @@ public class JobRoleController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<JobRoleDTO> update(@PathVariable Long id, @RequestBody JobRoleDTO dto) {
+    public ResponseEntity<JobRoleDTO> update(@PathVariable Integer id, @RequestBody JobRoleDTO dto) {
         dto.setVnRoleId(id);
         JobRoleDTO updated = jobRoleService.createRole(dto);
         return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
         try {
             jobRoleService.deleteRole(id);
             return ResponseEntity.noContent().build();

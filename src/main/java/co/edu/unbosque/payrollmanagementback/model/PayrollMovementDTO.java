@@ -2,10 +2,10 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class PayrollMovementDTO {
 
-	private Long vnMovementId;
-	private Long vnPayrollId;
-	private Long vnItemId;
-	private Long vnAmount;
+	private int vnMovementId;
+	private int vnPayrollId;
+	private int vnItemId;
+	private int vnAmount;
 	private String vcCreatedAt;
 	private String vcUpdatedAt;
 	
@@ -21,7 +21,7 @@ public class PayrollMovementDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public PayrollMovementDTO(Long vnMovementId, Long vnPayrollId, Long vnItemId, Long vnAmount, String vcCreatedAt,
+	public PayrollMovementDTO(int vnMovementId, int vnPayrollId, int vnItemId, int vnAmount, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnMovementId = vnMovementId;
@@ -35,56 +35,56 @@ public class PayrollMovementDTO {
 	/**
 	 * @return the vnMovementId
 	 */
-	public Long getVnMovementId() {
+	public int getVnMovementId() {
 		return vnMovementId;
 	}
 
 	/**
 	 * @param vnMovementId the vnMovementId to set
 	 */
-	public void setVnMovementId(Long vnMovementId) {
+	public void setVnMovementId(int vnMovementId) {
 		this.vnMovementId = vnMovementId;
 	}
 
 	/**
 	 * @return the vnPayrollId
 	 */
-	public Long getVnPayrollId() {
+	public int getVnPayrollId() {
 		return vnPayrollId;
 	}
 
 	/**
 	 * @param vnPayrollId the vnPayrollId to set
 	 */
-	public void setVnPayrollId(Long vnPayrollId) {
+	public void setVnPayrollId(int vnPayrollId) {
 		this.vnPayrollId = vnPayrollId;
 	}
 
 	/**
 	 * @return the vnItemId
 	 */
-	public Long getVnItemId() {
+	public int getVnItemId() {
 		return vnItemId;
 	}
 
 	/**
 	 * @param vnItemId the vnItemId to set
 	 */
-	public void setVnItemId(Long vnItemId) {
+	public void setVnItemId(int vnItemId) {
 		this.vnItemId = vnItemId;
 	}
 
 	/**
 	 * @return the vnAmount
 	 */
-	public Long getVnAmount() {
+	public int getVnAmount() {
 		return vnAmount;
 	}
 
 	/**
 	 * @param vnAmount the vnAmount to set
 	 */
-	public void setVnAmount(Long vnAmount) {
+	public void setVnAmount(int vnAmount) {
 		this.vnAmount = vnAmount;
 	}
 

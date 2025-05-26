@@ -32,7 +32,7 @@ public class ContractModeController {
 	    }
 
 	    @GetMapping("/{id}")
-	    public ResponseEntity<ContractModeDTO> getModeById(@PathVariable Long id) {
+	    public ResponseEntity<ContractModeDTO> getModeById(@PathVariable Integer id) {
 	    	ContractModeDTO Mode = modeService.getModeById(id);
 	        return Mode != null ? ResponseEntity.ok(Mode) : ResponseEntity.notFound().build();
 	    }
@@ -44,13 +44,13 @@ public class ContractModeController {
 	    }
 
 	    @PutMapping("/{id}")
-	    public ResponseEntity<ContractModeDTO> updateMode(@PathVariable Long id, @RequestBody ContractModeDTO dto) {
+	    public ResponseEntity<ContractModeDTO> updateMode(@PathVariable Integer id, @RequestBody ContractModeDTO dto) {
 	    	ContractModeDTO updated = modeService.updateMode(id, dto);
 	        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
 	    }
 
 	    @DeleteMapping("/{id}")
-	    public ResponseEntity<Void> deleteMode(@PathVariable Long id) {
+	    public ResponseEntity<Void> deleteMode(@PathVariable Integer id) {
 	    	modeService.deleteMode(id);
 	        return ResponseEntity.noContent().build();
 	    }

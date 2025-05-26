@@ -26,7 +26,7 @@ public class EmployeeService {
 	                .collect(Collectors.toList());
 	    }
 
-	    public EmployeeDTO getEmployeeById(Long id) {
+	    public EmployeeDTO getEmployeeById(Integer id) {
 	        return employeeRepository.findById(id)
 	                .map(DataMapper::employeeEntityToDTO)
 	                .orElse(null); 
@@ -38,7 +38,7 @@ public class EmployeeService {
 	        return DataMapper.employeeEntityToDTO(saved);
 	    }
 
-	    public EmployeeDTO updateEmployee(Long id, EmployeeDTO dto) {
+	    public EmployeeDTO updateEmployee(Integer id, EmployeeDTO dto) {
 	        Optional<EmployeeEntity> existing = employeeRepository.findById(id);
 	        if (existing.isPresent()) {
 	        	EmployeeEntity entity = DataMapper.employeeDTOtoEntity(dto);
@@ -49,7 +49,7 @@ public class EmployeeService {
 	        return null;
 	    }
 
-	    public void deleteEmployee(Long id) {
+	    public void deleteEmployee(Integer id) {
 	    	employeeRepository.deleteById(id);
 	    }
 }

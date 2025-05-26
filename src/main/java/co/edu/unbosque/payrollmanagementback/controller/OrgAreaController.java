@@ -31,7 +31,7 @@ public class OrgAreaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<OrgAreaDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<OrgAreaDTO> getById(@PathVariable Integer id) {
         try {
             OrgAreaDTO dto = orgAreaService.getAreaById(id);
             return ResponseEntity.ok(dto);
@@ -47,14 +47,14 @@ public class OrgAreaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<OrgAreaDTO> update(@PathVariable Long id, @RequestBody OrgAreaDTO dto) {
+    public ResponseEntity<OrgAreaDTO> update(@PathVariable Integer id, @RequestBody OrgAreaDTO dto) {
         dto.setVnAreaId(id);
         OrgAreaDTO updated = orgAreaService.saveArea(dto);
         return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
         try {
             orgAreaService.deleteArea(id);
             return ResponseEntity.noContent().build();

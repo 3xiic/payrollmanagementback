@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import co.edu.unbosque.payrollmanagementback.model.ConfigParamaterEntity;
 
-public interface ConfigParameterRepository extends CrudRepository<ConfigParamaterEntity, Long>{
+public interface ConfigParameterRepository extends CrudRepository<ConfigParamaterEntity, Integer>{
 
 }

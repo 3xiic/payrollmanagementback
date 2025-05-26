@@ -26,7 +26,7 @@ public class OrgAreaService {
 				.collect(Collectors.toList());
 	}
 
-	public OrgAreaDTO getAreaById(Long id) {
+	public OrgAreaDTO getAreaById(Integer id) {
 		return areaRepository.findById(id).map(DataMapper::orgAreaEntityToDTO)
 				.orElseThrow(() -> new RuntimeException("Área no encontrada con ID: " + id));
 	}
@@ -37,7 +37,7 @@ public class OrgAreaService {
 		return DataMapper.orgAreaEntityToDTO(savedEntity);
 	}
 
-	public void deleteArea(Long id) {
+	public void deleteArea(Integer id) {
 		if (!areaRepository.existsById(id)) {
 			throw new RuntimeException("No existe el área con ID: " + id);
 		}

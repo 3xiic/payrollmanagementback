@@ -14,13 +14,13 @@ public class JobRoleEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_role_id", unique = true)
-	private Long vnRoleId;
+	private int vnRoleId;
 	@Column(name = "vc_role_name")
 	private String vcRoleName;
 	@Column(name = "vn_area_id")
-	private Long vnAreaId;
+	private int vnAreaId;
 	@Column(name = "vn_base_salary")
-	private Long vnBaseSalary;
+	private int vnBaseSalary;
 	@Column(name = "vc_description")
 	private String vcDescription;
 	@Column(name = "vc_created_at")
@@ -45,7 +45,7 @@ public class JobRoleEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public JobRoleEntity(Long vnRoleId, String vcRoleName, Long vnAreaId, Long vnBaseSalary, String vcDescription,
+	public JobRoleEntity(int vnRoleId, String vcRoleName, int vnAreaId, int vnBaseSalary, String vcDescription,
 			String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnRoleId = vnRoleId;
@@ -61,14 +61,14 @@ public class JobRoleEntity {
 	/**
 	 * @return the vnRoleId
 	 */
-	public Long getVnRoleId() {
+	public int getVnRoleId() {
 		return vnRoleId;
 	}
 
 	/**
 	 * @param vnRoleId the vnRoleId to set
 	 */
-	public void setVnRoleId(Long vnRoleId) {
+	public void setVnRoleId(int vnRoleId) {
 		this.vnRoleId = vnRoleId;
 	}
 
@@ -89,28 +89,28 @@ public class JobRoleEntity {
 	/**
 	 * @return the vnAreaId
 	 */
-	public Long getVnAreaId() {
+	public int getVnAreaId() {
 		return vnAreaId;
 	}
 
 	/**
 	 * @param vnAreaId the vnAreaId to set
 	 */
-	public void setVnAreaId(Long vnAreaId) {
+	public void setVnAreaId(int vnAreaId) {
 		this.vnAreaId = vnAreaId;
 	}
 
 	/**
 	 * @return the vnBaseSalary
 	 */
-	public Long getVnBaseSalary() {
+	public int getVnBaseSalary() {
 		return vnBaseSalary;
 	}
 
 	/**
 	 * @param vnBaseSalary the vnBaseSalary to set
 	 */
-	public void setVnBaseSalary(Long vnBaseSalary) {
+	public void setVnBaseSalary(int vnBaseSalary) {
 		this.vnBaseSalary = vnBaseSalary;
 	}
 

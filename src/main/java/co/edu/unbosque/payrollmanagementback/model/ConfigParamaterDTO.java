@@ -1,16 +1,14 @@
 package co.edu.unbosque.payrollmanagementback.model;
 
-
-
 public class ConfigParamaterDTO {
 
-	private Long vnParamId;
-	private Long vnParamKey;
-	private Long vnParamValue;
+	private int vnParamId;
+	private int vnParamKey;
+	private int vnParamValue;
 	private String vcDescription;
 	private String vcCreatedAt;
 	private String vcUpdatedAt;
-	
+
 	public ConfigParamaterDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -23,8 +21,8 @@ public class ConfigParamaterDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public ConfigParamaterDTO(Long vnParamId, Long vnParamKey, Long vnParamValue, String vcDescription, String vcCreatedAt,
-			String vcUpdatedAt) {
+	public ConfigParamaterDTO(int vnParamId, int vnParamKey, int vnParamValue, String vcDescription,
+			String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnParamId = vnParamId;
 		this.vnParamKey = vnParamKey;
@@ -37,42 +35,42 @@ public class ConfigParamaterDTO {
 	/**
 	 * @return the vnParamId
 	 */
-	public Long getVnParamId() {
+	public int getVnParamId() {
 		return vnParamId;
 	}
 
 	/**
 	 * @param vnParamId the vnParamId to set
 	 */
-	public void setVnParamId(Long vnParamId) {
+	public void setVnParamId(int vnParamId) {
 		this.vnParamId = vnParamId;
 	}
 
 	/**
 	 * @return the vnParamKey
 	 */
-	public Long getVnParamKey() {
+	public int getVnParamKey() {
 		return vnParamKey;
 	}
 
 	/**
 	 * @param vnParamKey the vnParamKey to set
 	 */
-	public void setVnParamKey(Long vnParamKey) {
+	public void setVnParamKey(int vnParamKey) {
 		this.vnParamKey = vnParamKey;
 	}
 
 	/**
 	 * @return the vnParamValue
 	 */
-	public Long getVnParamValue() {
+	public int getVnParamValue() {
 		return vnParamValue;
 	}
 
 	/**
 	 * @param vnParamValue the vnParamValue to set
 	 */
-	public void setVnParamValue(Long vnParamValue) {
+	public void setVnParamValue(int vnParamValue) {
 		this.vnParamValue = vnParamValue;
 	}
 
@@ -117,6 +115,5 @@ public class ConfigParamaterDTO {
 	public void setVcUpdatedAt(String vcUpdatedAt) {
 		this.vcUpdatedAt = vcUpdatedAt;
 	}
-	
-	
+
 }

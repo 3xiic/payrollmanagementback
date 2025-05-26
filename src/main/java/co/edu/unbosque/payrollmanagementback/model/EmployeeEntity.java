@@ -16,11 +16,11 @@ public class EmployeeEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_employee_id", unique = true)
-	private Long vnEmployeeId;
+	private int vnEmployeeId;
 	@Column(name = "vn_person_id")
-	private Long vnPersonId;
+	private int vnPersonId;
 	@Column(name = "vn_role_id")
-	private Long vnRoleId;
+	private int vnRoleId;
 	@Column(name = "vc_hire_date")
 	private String vcHireDate;
 	@Column(name = "vc_bank_account")
@@ -62,7 +62,7 @@ public class EmployeeEntity {
 	 * @param vcUpdatedAt
 	 * @param roleEntity
 	 */
-	public EmployeeEntity(Long vnEmployeeId, Long vnPersonId, Long vnRoleId, String vcHireDate, String vcBankAccount,
+	public EmployeeEntity(int vnEmployeeId, int vnPersonId, int vnRoleId, String vcHireDate, String vcBankAccount,
 			String vcBankName, String vcAccountType, String vcStatus, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
@@ -82,7 +82,7 @@ public class EmployeeEntity {
 	/**
 	 * @return the vnEmployeeId
 	 */
-	public Long getVnEmployeeId() {
+	public int getVnEmployeeId() {
 		return vnEmployeeId;
 	}
 
@@ -90,7 +90,7 @@ public class EmployeeEntity {
 	/**
 	 * @param vnEmployeeId the vnEmployeeId to set
 	 */
-	public void setVnEmployeeId(Long vnEmployeeId) {
+	public void setVnEmployeeId(int vnEmployeeId) {
 		this.vnEmployeeId = vnEmployeeId;
 	}
 
@@ -98,7 +98,7 @@ public class EmployeeEntity {
 	/**
 	 * @return the vnPersonId
 	 */
-	public Long getVnPersonId() {
+	public int getVnPersonId() {
 		return vnPersonId;
 	}
 
@@ -106,7 +106,7 @@ public class EmployeeEntity {
 	/**
 	 * @param vnPersonId the vnPersonId to set
 	 */
-	public void setVnPersonId(Long vnPersonId) {
+	public void setVnPersonId(int vnPersonId) {
 		this.vnPersonId = vnPersonId;
 	}
 
@@ -114,7 +114,7 @@ public class EmployeeEntity {
 	/**
 	 * @return the vnRoleId
 	 */
-	public Long getVnRoleId() {
+	public int getVnRoleId() {
 		return vnRoleId;
 	}
 
@@ -122,7 +122,7 @@ public class EmployeeEntity {
 	/**
 	 * @param vnRoleId the vnRoleId to set
 	 */
-	public void setVnRoleId(Long vnRoleId) {
+	public void setVnRoleId(int vnRoleId) {
 		this.vnRoleId = vnRoleId;
 	}
 

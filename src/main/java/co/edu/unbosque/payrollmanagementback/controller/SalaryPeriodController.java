@@ -31,7 +31,7 @@ public class SalaryPeriodController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<SalaryPeriodDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<SalaryPeriodDTO> getById(@PathVariable Integer id) {
         try {
             SalaryPeriodDTO dto = salaryPeriodService.getSalaryPeriodById(id);
             return ResponseEntity.ok(dto);
@@ -47,14 +47,14 @@ public class SalaryPeriodController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<SalaryPeriodDTO> update(@PathVariable Long id, @RequestBody SalaryPeriodDTO dto) {
+    public ResponseEntity<SalaryPeriodDTO> update(@PathVariable Integer id, @RequestBody SalaryPeriodDTO dto) {
         dto.setVnPeriodId(id);
         SalaryPeriodDTO updated = salaryPeriodService.saveSalaryPeriod(dto);
         return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
         try {
             salaryPeriodService.deleteSalaryPeriod(id);
             return ResponseEntity.noContent().build();

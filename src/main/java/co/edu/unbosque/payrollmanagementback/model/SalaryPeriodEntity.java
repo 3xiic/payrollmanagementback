@@ -13,7 +13,7 @@ public class SalaryPeriodEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_period_id", unique = true)
-	private Long vnPeriodId;
+	private int vnPeriodId;
 	@Column(name = "vc_start_date")
 	private String vcStartDate;
 	@Column(name = "vc_end_date")
@@ -43,7 +43,7 @@ public class SalaryPeriodEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public SalaryPeriodEntity(Long vnPeriodId, String vcStartDate, String vcEndDate, String vcPaymentDate, String vcStatus,
+	public SalaryPeriodEntity(int vnPeriodId, String vcStartDate, String vcEndDate, String vcPaymentDate, String vcStatus,
 			String vcDescription, String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnPeriodId = vnPeriodId;
@@ -59,14 +59,14 @@ public class SalaryPeriodEntity {
 	/**
 	 * @return the vnPeriodId
 	 */
-	public Long getVnPeriodId() {
+	public int getVnPeriodId() {
 		return vnPeriodId;
 	}
 
 	/**
 	 * @param vnPeriodId the vnPeriodId to set
 	 */
-	public void setVnPeriodId(Long vnPeriodId) {
+	public void setVnPeriodId(int vnPeriodId) {
 		this.vnPeriodId = vnPeriodId;
 	}
 

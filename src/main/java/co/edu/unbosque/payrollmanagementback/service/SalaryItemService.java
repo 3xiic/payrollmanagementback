@@ -23,7 +23,7 @@ public class SalaryItemService {
                 .collect(Collectors.toList());
     }
 
-    public SalaryItemDTO getSalaryItemById(Long id) {
+    public SalaryItemDTO getSalaryItemById(Integer id) {
         return salaryItemRepository.findById(id)
                 .map(DataMapper::salaryItemEntityToDTO)
                 .orElseThrow(() -> new RuntimeException("SalaryItem no encontrado con ID: " + id));
@@ -35,7 +35,7 @@ public class SalaryItemService {
         return DataMapper.salaryItemEntityToDTO(savedEntity);
     }
 
-    public void deleteSalaryItem(Long id) {
+    public void deleteSalaryItem(Integer id) {
         if (!salaryItemRepository.existsById(id)) {
             throw new RuntimeException("SalaryItem no existe con ID: " + id);
         }

@@ -31,7 +31,7 @@ public class SalaryItemController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<SalaryItemDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<SalaryItemDTO> getById(@PathVariable Integer id) {
         try {
             SalaryItemDTO dto = salaryItemService.getSalaryItemById(id);
             return ResponseEntity.ok(dto);
@@ -47,14 +47,14 @@ public class SalaryItemController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<SalaryItemDTO> update(@PathVariable Long id, @RequestBody SalaryItemDTO dto) {
+    public ResponseEntity<SalaryItemDTO> update(@PathVariable Integer id, @RequestBody SalaryItemDTO dto) {
         dto.setVnItemdId(id);
         SalaryItemDTO updated = salaryItemService.saveSalaryItem(dto);
         return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
         try {
             salaryItemService.deleteSalaryItem(id);
             return ResponseEntity.noContent().build();

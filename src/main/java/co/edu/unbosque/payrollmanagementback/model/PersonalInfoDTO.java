@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 
 public class PersonalInfoDTO {
 
-	private Long vnPersonId;
+	private int vnPersonId;
 	private String vcDocumentType;
 	private String vcDocumentNumber;
 	private String vcFirstName;
@@ -37,7 +37,7 @@ public class PersonalInfoDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public PersonalInfoDTO(Long vnPersonId, String vcDocumentType, String vcDocumentNumber, String vcFirstName,
+	public PersonalInfoDTO(int vnPersonId, String vcDocumentType, String vcDocumentNumber, String vcFirstName,
 			String vcLastName, String vcBirthDate, String vcGender, String vcPhone, String vcEmail, String vcAddress,
 			String vcCreatedAt, String vcUpdatedAt) {
 		super();
@@ -59,7 +59,7 @@ public class PersonalInfoDTO {
 	/**
 	 * @return the vnPersonId
 	 */
-	public Long getVnPersonId() {
+	public int getVnPersonId() {
 		return vnPersonId;
 	}
 
@@ -67,7 +67,7 @@ public class PersonalInfoDTO {
 	/**
 	 * @param vnPersonId the vnPersonId to set
 	 */
-	public void setVnPersonId(Long vnPersonId) {
+	public void setVnPersonId(int vnPersonId) {
 		this.vnPersonId = vnPersonId;
 	}
 

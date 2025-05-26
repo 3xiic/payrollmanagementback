@@ -25,7 +25,7 @@ public class ContractModeService {
 	                .collect(Collectors.toList());
 	    }
 
-	    public ContractModeDTO getModeById(Long id) {
+	    public ContractModeDTO getModeById(Integer id) {
 	        return contractModeRepository.findById(id)
 	                .map(DataMapper::modeEntitytoDTO)
 	                .orElse(null); 
@@ -37,7 +37,7 @@ public class ContractModeService {
 	        return DataMapper.modeEntitytoDTO(saved);
 	    }
 
-	    public ContractModeDTO updateMode(Long id, ContractModeDTO dto) {
+	    public ContractModeDTO updateMode(Integer id, ContractModeDTO dto) {
 	        Optional<ContractModeEntity> existing = contractModeRepository.findById(id);
 	        if (existing.isPresent()) {
 	        	ContractModeEntity entity = DataMapper.modeDTOtoEntity(dto);
@@ -48,7 +48,7 @@ public class ContractModeService {
 	        return null;
 	    }
 
-	    public void deleteMode(Long id) {
+	    public void deleteMode(Integer id) {
 	    	contractModeRepository.deleteById(id);
 	    }
 		

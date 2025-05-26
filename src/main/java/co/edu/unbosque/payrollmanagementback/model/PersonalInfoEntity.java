@@ -16,7 +16,7 @@ public class PersonalInfoEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_person_id", unique = true)
-	private Long vnPersonId;
+	private int vnPersonId;
 	@Column(name = "vc_document_type")
 	private String vcDocumentType;
 	@Column(name = "vc_document_number")
@@ -63,7 +63,7 @@ public class PersonalInfoEntity {
 	 * @param vcUpdatedAt
 	 * @param employeeEntity
 	 */
-	public PersonalInfoEntity(Long vnPersonId, String vcDocumentType, String vcDocumentNumber, String vcFirstName,
+	public PersonalInfoEntity(int vnPersonId, String vcDocumentType, String vcDocumentNumber, String vcFirstName,
 			String vcLastName, String vcBirthDate, String vcGender, String vcPhone, String vcEmail, String vcAddress,
 			String vcCreatedAt, String vcUpdatedAt) {
 		super();
@@ -85,7 +85,7 @@ public class PersonalInfoEntity {
 	/**
 	 * @return the vnPersonId
 	 */
-	public Long getVnPersonId() {
+	public int getVnPersonId() {
 		return vnPersonId;
 	}
 
@@ -93,7 +93,7 @@ public class PersonalInfoEntity {
 	/**
 	 * @param vnPersonId the vnPersonId to set
 	 */
-	public void setVnPersonId(Long vnPersonId) {
+	public void setVnPersonId(int vnPersonId) {
 		this.vnPersonId = vnPersonId;
 	}
 

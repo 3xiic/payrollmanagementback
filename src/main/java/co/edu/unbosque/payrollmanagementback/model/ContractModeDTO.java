@@ -3,7 +3,7 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class ContractModeDTO {
 
-	private Long vnModeId;
+	private int vnModeId;
 	private String vcModeName;
 	private String vcDescription;
 	private String vcCreatedAt;
@@ -22,7 +22,7 @@ public class ContractModeDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public ContractModeDTO(Long vnModeId, String vcModeName, String vcDescription, String vcCreatedAt,
+	public ContractModeDTO(int vnModeId, String vcModeName, String vcDescription, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnModeId = vnModeId;
@@ -37,14 +37,14 @@ public class ContractModeDTO {
 	/**
 	 * @return the vnModeId
 	 */
-	public Long getVnModeId() {
+	public int getVnModeId() {
 		return vnModeId;
 	}
 
 	/**
 	 * @param vnModeId the vnModeId to set
 	 */
-	public void setVnModeId(Long vnModeId) {
+	public void setVnModeId(int vnModeId) {
 		this.vnModeId = vnModeId;
 	}
 

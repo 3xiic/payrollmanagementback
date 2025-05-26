@@ -2,7 +2,7 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class OrgAreaDTO {
 	
-	private Long vnAreaId;
+	private int vnAreaId;
 	private String vcAreaName;
 	private String vcAreaDesc;
 	private String vcCreatedAt;
@@ -21,7 +21,7 @@ public class OrgAreaDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public OrgAreaDTO(Long vnAreaId, String vcAreaName, String vcAreaDesc, String vcCreatedAt, String vcUpdatedAt) {
+	public OrgAreaDTO(int vnAreaId, String vcAreaName, String vcAreaDesc, String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnAreaId = vnAreaId;
 		this.vcAreaName = vcAreaName;
@@ -35,14 +35,14 @@ public class OrgAreaDTO {
 	/**
 	 * @return the vnAreaId
 	 */
-	public Long getVnAreaId() {
+	public int getVnAreaId() {
 		return vnAreaId;
 	}
 
 	/**
 	 * @param vnAreaId the vnAreaId to set
 	 */
-	public void setVnAreaId(Long vnAreaId) {
+	public void setVnAreaId(int vnAreaId) {
 		this.vnAreaId = vnAreaId;
 	}
 

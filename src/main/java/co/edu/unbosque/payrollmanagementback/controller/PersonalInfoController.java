@@ -31,7 +31,7 @@ public class PersonalInfoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PersonalInfoDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<PersonalInfoDTO> getById(@PathVariable Integer id) {
         try {
             PersonalInfoDTO dto = personalInfoService.getPersonalInfoById(id);
             return ResponseEntity.ok(dto);
@@ -47,14 +47,14 @@ public class PersonalInfoController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PersonalInfoDTO> update(@PathVariable Long id, @RequestBody PersonalInfoDTO dto) {
+    public ResponseEntity<PersonalInfoDTO> update(@PathVariable Integer id, @RequestBody PersonalInfoDTO dto) {
         dto.setVnPersonId(id);
         PersonalInfoDTO updated = personalInfoService.savePersonalInfo(dto);
         return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
         try {
             personalInfoService.deletePersonalInfo(id);
             return ResponseEntity.noContent().build();

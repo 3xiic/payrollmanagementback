@@ -32,7 +32,7 @@ public class ConfigParamaterController {
 	    }
 
 	    @GetMapping("/{id}")
-	    public ResponseEntity<ConfigParamaterDTO> getParameterById(@PathVariable Long id) {
+	    public ResponseEntity<ConfigParamaterDTO> getParameterById(@PathVariable Integer id) {
 	    	ConfigParamaterDTO Parameter = paramaterService.getParameterById(id);
 	        return Parameter != null ? ResponseEntity.ok(Parameter) : ResponseEntity.notFound().build();
 	    }
@@ -44,13 +44,13 @@ public class ConfigParamaterController {
 	    }
 
 	    @PutMapping("/{id}")
-	    public ResponseEntity<ConfigParamaterDTO> updateParameter(@PathVariable Long id, @RequestBody ConfigParamaterDTO dto) {
+	    public ResponseEntity<ConfigParamaterDTO> updateParameter(@PathVariable Integer id, @RequestBody ConfigParamaterDTO dto) {
 	    	ConfigParamaterDTO updated = paramaterService.updateParameter(id, dto);
 	        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
 	    }
 
 	    @DeleteMapping("/{id}")
-	    public ResponseEntity<Void> deleteParameter(@PathVariable Long id) {
+	    public ResponseEntity<Void> deleteParameter(@PathVariable Integer id) {
 	    	paramaterService.deleteParameter(id);
 	        return ResponseEntity.noContent().build();
 	    }

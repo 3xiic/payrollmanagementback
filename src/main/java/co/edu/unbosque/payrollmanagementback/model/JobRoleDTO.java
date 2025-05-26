@@ -2,10 +2,10 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class JobRoleDTO {
 	
-	private Long vnRoleId;
+	private int vnRoleId;
 	private String vcRoleName;
-	private Long vnAreaId;
-	private Long vnBaseSalary;
+	private int vnAreaId;
+	private int vnBaseSalary;
 	private String vcDescription;
 	private String vcCreatedAt;
 	private String vcUpdatedAt;
@@ -24,7 +24,7 @@ public class JobRoleDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public JobRoleDTO(Long vnRoleId, String vcRoleName, Long vnAreaId, Long vnBaseSalary, String vcDescription,
+	public JobRoleDTO(int vnRoleId, String vcRoleName, int vnAreaId, int vnBaseSalary, String vcDescription,
 			String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnRoleId = vnRoleId;
@@ -40,14 +40,14 @@ public class JobRoleDTO {
 	/**
 	 * @return the vnRoleId
 	 */
-	public Long getVnRoleId() {
+	public int getVnRoleId() {
 		return vnRoleId;
 	}
 
 	/**
 	 * @param vnRoleId the vnRoleId to set
 	 */
-	public void setVnRoleId(Long vnRoleId) {
+	public void setVnRoleId(int vnRoleId) {
 		this.vnRoleId = vnRoleId;
 	}
 
@@ -68,28 +68,28 @@ public class JobRoleDTO {
 	/**
 	 * @return the vnAreaId
 	 */
-	public Long getVnAreaId() {
+	public int getVnAreaId() {
 		return vnAreaId;
 	}
 
 	/**
 	 * @param vnAreaId the vnAreaId to set
 	 */
-	public void setVnAreaId(Long vnAreaId) {
+	public void setVnAreaId(int vnAreaId) {
 		this.vnAreaId = vnAreaId;
 	}
 
 	/**
 	 * @return the vnBaseSalary
 	 */
-	public Long getVnBaseSalary() {
+	public int getVnBaseSalary() {
 		return vnBaseSalary;
 	}
 
 	/**
 	 * @param vnBaseSalary the vnBaseSalary to set
 	 */
-	public void setVnBaseSalary(Long vnBaseSalary) {
+	public void setVnBaseSalary(int vnBaseSalary) {
 		this.vnBaseSalary = vnBaseSalary;
 	}
 

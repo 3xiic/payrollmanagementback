@@ -31,7 +31,7 @@ public class PayrollMovementController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PayrollMovementDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<PayrollMovementDTO> getById(@PathVariable Integer id) {
         try {
             PayrollMovementDTO dto = payrollMovementService.getMovementById(id);
             return ResponseEntity.ok(dto);
@@ -47,14 +47,14 @@ public class PayrollMovementController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PayrollMovementDTO> update(@PathVariable Long id, @RequestBody PayrollMovementDTO dto) {
+    public ResponseEntity<PayrollMovementDTO> update(@PathVariable Integer id, @RequestBody PayrollMovementDTO dto) {
         dto.setVnMovementId(id);
         PayrollMovementDTO updated = payrollMovementService.saveMovement(dto);
         return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
         try {
             payrollMovementService.deleteMovement(id);
             return ResponseEntity.noContent().build();

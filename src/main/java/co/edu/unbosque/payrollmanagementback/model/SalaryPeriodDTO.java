@@ -2,7 +2,7 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class SalaryPeriodDTO {
 
-	private Long vnPeriodId;
+	private int vnPeriodId;
 	private String vcStartDate;
 	private String vcEndDate;
 	private String vcPaymentDate;
@@ -25,7 +25,7 @@ public class SalaryPeriodDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public SalaryPeriodDTO(Long vnPeriodId, String vcStartDate, String vcEndDate, String vcPaymentDate, String vcStatus,
+	public SalaryPeriodDTO(int vnPeriodId, String vcStartDate, String vcEndDate, String vcPaymentDate, String vcStatus,
 			String vcDescription, String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnPeriodId = vnPeriodId;
@@ -41,14 +41,14 @@ public class SalaryPeriodDTO {
 	/**
 	 * @return the vnPeriodId
 	 */
-	public Long getVnPeriodId() {
+	public int getVnPeriodId() {
 		return vnPeriodId;
 	}
 
 	/**
 	 * @param vnPeriodId the vnPeriodId to set
 	 */
-	public void setVnPeriodId(Long vnPeriodId) {
+	public void setVnPeriodId(int vnPeriodId) {
 		this.vnPeriodId = vnPeriodId;
 	}
 

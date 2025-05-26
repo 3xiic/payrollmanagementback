@@ -13,7 +13,7 @@ public class SalaryItemEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_item_id", unique = true)
-	private Long vnItemdId;
+	private int vnItemdId;
 	@Column(name = "vc_item_name")
 	private String vcItemName;
 	@Column(name = "vc_item_type")
@@ -21,9 +21,9 @@ public class SalaryItemEntity {
 	@Column(name = "vc_calc_type")
 	private String vcCalcType;
 	@Column(name = "vn_social_security")
-	private Long vnSocialSecurity;
+	private int vnSocialSecurity;
 	@Column(name = "vn_parafiscal")
-	private Long vnParafiscal;
+	private int vnParafiscal;
 	@Column(name = "vc_description")
 	private String vcDescription;
 	@Column(name = "vc_created_at")
@@ -48,8 +48,8 @@ public class SalaryItemEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public SalaryItemEntity(Long vnItemdId, String vcItemName, String vcItemType, String vcCalcType, Long vnSocialSecurity,
-			Long parafiscal, String vcDescription, String vcCreatedAt, String vcUpdatedAt) {
+	public SalaryItemEntity(int vnItemdId, String vcItemName, String vcItemType, String vcCalcType, int vnSocialSecurity,
+			int parafiscal, String vcDescription, String vcCreatedAt, String vcUpdatedAt) {
 		super();
 		this.vnItemdId = vnItemdId;
 		this.vcItemName = vcItemName;
@@ -66,7 +66,7 @@ public class SalaryItemEntity {
 	/**
 	 * @return the vnItemdId
 	 */
-	public Long getVnItemdId() {
+	public int getVnItemdId() {
 		return vnItemdId;
 	}
 
@@ -74,7 +74,7 @@ public class SalaryItemEntity {
 	/**
 	 * @param vnItemdId the vnItemdId to set
 	 */
-	public void setVnItemdId(Long vnItemdId) {
+	public void setVnItemdId(int vnItemdId) {
 		this.vnItemdId = vnItemdId;
 	}
 
@@ -130,7 +130,7 @@ public class SalaryItemEntity {
 	/**
 	 * @return the vnSocialSecurity
 	 */
-	public Long getVnSocialSecurity() {
+	public int getVnSocialSecurity() {
 		return vnSocialSecurity;
 	}
 
@@ -138,7 +138,7 @@ public class SalaryItemEntity {
 	/**
 	 * @param vnSocialSecurity the vnSocialSecurity to set
 	 */
-	public void setVnSocialSecurity(Long vnSocialSecurity) {
+	public void setVnSocialSecurity(int vnSocialSecurity) {
 		this.vnSocialSecurity = vnSocialSecurity;
 	}
 
@@ -146,7 +146,7 @@ public class SalaryItemEntity {
 	/**
 	 * @return the parafiscal
 	 */
-	public Long getParafiscal() {
+	public int getParafiscal() {
 		return vnParafiscal;
 	}
 
@@ -154,7 +154,7 @@ public class SalaryItemEntity {
 	/**
 	 * @param parafiscal the parafiscal to set
 	 */
-	public void setParafiscal(Long parafiscal) {
+	public void setParafiscal(int parafiscal) {
 		this.vnParafiscal = parafiscal;
 	}
 

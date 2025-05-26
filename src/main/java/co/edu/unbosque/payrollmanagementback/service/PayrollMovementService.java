@@ -23,7 +23,7 @@ public class PayrollMovementService {
                 .collect(Collectors.toList());
     }
 
-    public PayrollMovementDTO getMovementById(Long id) {
+    public PayrollMovementDTO getMovementById(Integer id) {
         return payrollMovementRepository.findById(id)
                 .map(DataMapper::payrollMovementEntityToDTO)
                 .orElseThrow(() -> new RuntimeException("Movimiento de nómina no encontrado con ID: " + id));
@@ -35,7 +35,7 @@ public class PayrollMovementService {
         return DataMapper.payrollMovementEntityToDTO(savedEntity);
     }
 
-    public void deleteMovement(Long id) {
+    public void deleteMovement(Integer id) {
         if (!payrollMovementRepository.existsById(id)) {
             throw new RuntimeException("No existe el movimiento de nómina con ID: " + id);
         }

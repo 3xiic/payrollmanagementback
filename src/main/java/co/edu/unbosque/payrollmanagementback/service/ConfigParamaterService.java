@@ -25,7 +25,7 @@ public class ConfigParamaterService {
                 .collect(Collectors.toList());
     }
 
-    public ConfigParamaterDTO getParameterById(Long id) {
+    public ConfigParamaterDTO getParameterById(Integer id) {
         return parameterRepository.findById(id)
                 .map(DataMapper::paramaterEntitytoDTO)
                 .orElse(null); 
@@ -37,7 +37,7 @@ public class ConfigParamaterService {
         return DataMapper.paramaterEntitytoDTO(saved);
     }
 
-    public ConfigParamaterDTO updateParameter(Long id, ConfigParamaterDTO dto) {
+    public ConfigParamaterDTO updateParameter(Integer id, ConfigParamaterDTO dto) {
         Optional<ConfigParamaterEntity> existing = parameterRepository.findById(id);
         if (existing.isPresent()) {
         	ConfigParamaterEntity entity = DataMapper.paramater(dto);
@@ -48,7 +48,7 @@ public class ConfigParamaterService {
         return null;
     }
 
-    public void deleteParameter(Long id) {
+    public void deleteParameter(Integer id) {
     	parameterRepository.deleteById(id);
     }
 	

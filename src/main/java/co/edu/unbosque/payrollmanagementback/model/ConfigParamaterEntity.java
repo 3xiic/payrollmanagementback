@@ -13,11 +13,11 @@ public class ConfigParamaterEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_param_id", unique = true)
-	private Long vnParamId;
+	private int vnParamId;
 	@Column(name = "vn_param_key")
-	private Long vnParamKey;
+	private int vnParamKey;
 	@Column(name = "vn_param_value")
-	private Long vnParamValue;
+	private int vnParamValue;
 	@Column(name = "vc_description")
 	private String vcDescription;
 	@Column(name = "vc_created_at")
@@ -37,7 +37,7 @@ public class ConfigParamaterEntity {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public ConfigParamaterEntity(Long vnParamId, Long vnParamKey, Long vnParamValue, String vcDescription, String vcCreatedAt,
+	public ConfigParamaterEntity(int vnParamId, int vnParamKey, int vnParamValue, String vcDescription, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnParamId = vnParamId;
@@ -51,42 +51,42 @@ public class ConfigParamaterEntity {
 	/**
 	 * @return the vnParamId
 	 */
-	public Long getVnParamId() {
+	public int getVnParamId() {
 		return vnParamId;
 	}
 
 	/**
 	 * @param vnParamId the vnParamId to set
 	 */
-	public void setVnParamId(Long vnParamId) {
+	public void setVnParamId(int vnParamId) {
 		this.vnParamId = vnParamId;
 	}
 
 	/**
 	 * @return the vnParamKey
 	 */
-	public Long getVnParamKey() {
+	public int getVnParamKey() {
 		return vnParamKey;
 	}
 
 	/**
 	 * @param vnParamKey the vnParamKey to set
 	 */
-	public void setVnParamKey(Long vnParamKey) {
+	public void setVnParamKey(int vnParamKey) {
 		this.vnParamKey = vnParamKey;
 	}
 
 	/**
 	 * @return the vnParamValue
 	 */
-	public Long getVnParamValue() {
+	public int getVnParamValue() {
 		return vnParamValue;
 	}
 
 	/**
 	 * @param vnParamValue the vnParamValue to set
 	 */
-	public void setVnParamValue(Long vnParamValue) {
+	public void setVnParamValue(int vnParamValue) {
 		this.vnParamValue = vnParamValue;
 	}
 

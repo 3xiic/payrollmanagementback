@@ -5,13 +5,13 @@ package co.edu.unbosque.payrollmanagementback.model;
 
 public class EmployeeContractDTO {
 
-	private Long vnContractId;
-	private Long vnEmployeeId;
-	private Long vnModeId;
+	private int vnContractId;
+	private int vnEmployeeId;
+	private int vnModeId;
 	private String vcStartDate;
 	private String vcEndDate;
-	private Long vnMonthlySalary;
-	private Long vnHoursWeek;
+	private int vnMonthlySalary;
+	private int vnHoursWeek;
 	private String vcTerms;
 	private String vcStatus;
 	private String vcCreatedAt;
@@ -34,8 +34,8 @@ public class EmployeeContractDTO {
 	 * @param vcCreatedAt
 	 * @param vcUpdatedAt
 	 */
-	public EmployeeContractDTO(Long vnContractId, Long vnEmployeeId, Long vnModeId, String vcStartDate, String vcEndDate,
-			Long vnMonthlySalary, Long vnHoursWeek, String vcTerms, String vcStatus, String vcCreatedAt,
+	public EmployeeContractDTO(int vnContractId, int vnEmployeeId, int vnModeId, String vcStartDate, String vcEndDate,
+			int vnMonthlySalary, int vnHoursWeek, String vcTerms, String vcStatus, String vcCreatedAt,
 			String vcUpdatedAt) {
 		super();
 		this.vnContractId = vnContractId;
@@ -56,7 +56,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @return the vnContractId
 	 */
-	public Long getVnContractId() {
+	public int getVnContractId() {
 		return vnContractId;
 	}
 
@@ -65,7 +65,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @param vnContractId the vnContractId to set
 	 */
-	public void setVnContractId(Long vnContractId) {
+	public void setVnContractId(int vnContractId) {
 		this.vnContractId = vnContractId;
 	}
 
@@ -74,7 +74,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @return the vnEmployeeId
 	 */
-	public Long getVnEmployeeId() {
+	public int getVnEmployeeId() {
 		return vnEmployeeId;
 	}
 
@@ -83,7 +83,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @param vnEmployeeId the vnEmployeeId to set
 	 */
-	public void setVnEmployeeId(Long vnEmployeeId) {
+	public void setVnEmployeeId(int vnEmployeeId) {
 		this.vnEmployeeId = vnEmployeeId;
 	}
 
@@ -92,7 +92,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @return the vnModeId
 	 */
-	public Long getVnModeId() {
+	public int getVnModeId() {
 		return vnModeId;
 	}
 
@@ -101,7 +101,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @param vnModeId the vnModeId to set
 	 */
-	public void setVnModeId(Long vnModeId) {
+	public void setVnModeId(int vnModeId) {
 		this.vnModeId = vnModeId;
 	}
 
@@ -146,7 +146,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @return the vnMonthlySalary
 	 */
-	public Long getVnMonthlySalary() {
+	public int getVnMonthlySalary() {
 		return vnMonthlySalary;
 	}
 
@@ -155,7 +155,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @param vnMonthlySalary the vnMonthlySalary to set
 	 */
-	public void setVnMonthlySalary(Long vnMonthlySalary) {
+	public void setVnMonthlySalary(int vnMonthlySalary) {
 		this.vnMonthlySalary = vnMonthlySalary;
 	}
 
@@ -164,7 +164,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @return the vnHoursWeek
 	 */
-	public Long getVnHoursWeek() {
+	public int getVnHoursWeek() {
 		return vnHoursWeek;
 	}
 
@@ -173,7 +173,7 @@ public class EmployeeContractDTO {
 	/**
 	 * @param vnHoursWeek the vnHoursWeek to set
 	 */
-	public void setVnHoursWeek(Long vnHoursWeek) {
+	public void setVnHoursWeek(int vnHoursWeek) {
 		this.vnHoursWeek = vnHoursWeek;
 	}
 
