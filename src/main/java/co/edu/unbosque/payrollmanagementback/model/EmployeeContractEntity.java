@@ -16,9 +16,9 @@ public class EmployeeContractEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_contract_id", unique = true)
 	private int vnContractId;
-	@Column(name = "vn_employee_id")
+	@Column(name = "vn_employee_id", insertable = false, updatable = false)
 	private int vnEmployeeId;
-	@Column(name = "vn_mode_id")
+	@Column(name = "vn_mode_id", insertable = false, updatable = false)
 	private int vnModeId;
 	@Column(name = "vc_start_date")
 	private String vcStartDate;

@@ -16,9 +16,9 @@ public class PayrollMovementEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_movement_id", unique = true)
 	private int vnMovementId;
-	@Column(name = "vn_payroll_id")
+	@Column(name = "vn_payroll_id", insertable = false, updatable = false)
 	private int vnPayrollId;
-	@Column(name = "vn_item_id")
+	@Column(name = "vn_item_id", insertable = false, updatable = false)
 	private int vnItemId;
 	@Column(name = "vn_amount")
 	private int vnAmount;

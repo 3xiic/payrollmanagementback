@@ -17,7 +17,7 @@ public class JobRoleEntity {
 	private int vnRoleId;
 	@Column(name = "vc_role_name")
 	private String vcRoleName;
-	@Column(name = "vn_area_id")
+	@Column(name = "vn_area_id", insertable = false, updatable = false)
 	private int vnAreaId;
 	@Column(name = "vn_base_salary")
 	private int vnBaseSalary;

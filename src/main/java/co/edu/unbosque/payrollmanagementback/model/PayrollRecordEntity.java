@@ -20,11 +20,11 @@ public class PayrollRecordEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "vn_payroll_id", unique = true)
 	private int vnPayrollId;
-	@Column(name = "vn_employee_id")
+	@Column(name = "vn_employee_id", insertable = false, updatable = false)
 	private int vnEmployeeId;
-	@Column(name = "vn_period_id")
+	@Column(name = "vn_period_id", insertable = false, updatable = false)
 	private int vnPeriodId;
-	@Column(name = "vn_contract_id")
+	@Column(name = "vn_contract_id", insertable = false, updatable = false)
 	private int vnContractId;
 	@Column(name = "vn_salary_base")
 	private int vnSalaryBase;
